@@ -16,7 +16,7 @@
         android:textColor="@color/black"
         android:textSize="32sp"
         android:gravity="center_horizontal"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="monospace"
         />
 
     <androidx.recyclerview.widget.RecyclerView
