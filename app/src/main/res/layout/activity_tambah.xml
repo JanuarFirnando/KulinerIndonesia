@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_2"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".Activity.TambahActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MENAMBAH KULINER"
+        android:textColor="@color/purple_500"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/garuda"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/cursor"
+        android:textColor="@color/white"
+        android:id="@+id/et_nama"
+        android:hint="Nama Kuliner"
+        android:drawableStart="@drawable/baseline_restaurant_menu_24"
+        android:drawableTint="#86F10A"
+        android:drawablePadding="12dp"
+        android:textColorHint="#86F10A"
+        android:paddingLeft="20dp"
+        android:layout_margin="15dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/cursor"
+        android:textColor="@color/white"
+        android:id="@+id/et_asal"
+        android:hint="Asal Kuliner"
+        android:drawableStart="@drawable/baseline_flag_24"
+        android:drawableTint="#86F10A"
+        android:drawablePadding="12dp"
+        android:textColorHint="#86F10A"
+        android:paddingLeft="20dp"
+        android:layout_margin="15dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/cursor"
+        android:textColor="@color/white"
+        android:id="@+id/et_deskripsi_singkat"
+        android:hint="Deskripsi Kuliner"
+        android:drawableStart="@drawable/baseline_description_24"
+        android:drawableTint="#86F10A"
+        android:drawablePadding="12dp"
+        android:textColorHint="#86F10A"
+        android:paddingLeft="20dp"
+        android:layout_margin="15dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/btn_tambah"
+        android:text="tambah"
+        app:cornerRadius="32dp"
+        app:backgroundTint="#673AB7"
+        android:textColor="#86F10A"
+        android:layout_margin="15dp"
+        />
+</LinearLayout>
