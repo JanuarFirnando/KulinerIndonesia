@@ -8,38 +8,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@drawable/bg_3"
+        android:orientation="vertical"
+        android:background="@drawable/backgroundlist"
+        android:padding="10dp"
         >
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:orientation="vertical">
-
         <TextView
             android:id="@+id/tv_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
+
             android:text="id"/>
     <TextView
         android:id="@+id/tv_nama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginBottom="12dp"
         android:text="Makanan"/>
 
-        <TextView
-            android:id="@+id/tv_asal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_marginBottom="12dp"
-            android:textColor="@color/black"
-            android:text="Asal"/>
 
         <TextView
             android:id="@+id/tv_deskripsi_singkat"
@@ -47,20 +35,11 @@
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:layout_marginBottom="12dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="Deskripsi"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logokuliner"
 
-    </LinearLayout>
-    </LinearLayout>
+
 
 </androidx.cardview.widget.CardView>
