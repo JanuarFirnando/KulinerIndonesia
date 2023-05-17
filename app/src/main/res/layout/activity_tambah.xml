@@ -68,6 +68,7 @@
         android:textColorHint="#86F10A"
         android:paddingLeft="20dp"
         android:layout_margin="15dp"
+        android:maxLength="500"
         />
 
     <com.google.android.material.button.MaterialButton
