@@ -3,6 +3,7 @@ package com.si6a.kulinerkita.Adapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.si6a.kulinerkita.API.APIRequestData;
 import com.si6a.kulinerkita.API.RetroServer;
 import com.si6a.kulinerkita.Activity.MainActivity;
+import com.si6a.kulinerkita.Activity.UbahActivity;
 import com.si6a.kulinerkita.Model.ModelKuliner;
 import com.si6a.kulinerkita.Model.ModelResponse;
 import com.si6a.kulinerkita.R;
@@ -48,8 +50,8 @@ public class AdapterKuliner extends RecyclerView.Adapter<AdapterKuliner.VHKuline
         ModelKuliner MK = listkuliner.get(position);
 
         holder.tvID.setText(MK.getId());
-        holder.tvNama.setText(MK.getNama() + " (" + MK.getAsal() + ")");
-
+        holder.tvNama.setText(MK.getNama());
+        holder.tvAsal.setText(MK.getAsal());
         holder.tvDeskripsiSingkat.setText(MK.getDeskripsi_singkat());
     }
 
@@ -65,6 +67,7 @@ public class AdapterKuliner extends RecyclerView.Adapter<AdapterKuliner.VHKuline
             super(itemView);
             tvID = itemView.findViewById(R.id.tv_id);
             tvNama = itemView.findViewById(R.id.tv_nama);
+            tvAsal = itemView.findViewById(R.id.tv_asal);
             tvDeskripsiSingkat = itemView.findViewById(R.id.tv_deskripsi_singkat);
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
@@ -85,7 +88,12 @@ public class AdapterKuliner extends RecyclerView.Adapter<AdapterKuliner.VHKuline
                     pesan.setPositiveButton("Ubah", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
+                            Intent pindah = new Intent(ctx, UbahActivity.class);
+                            pindah.putExtra("xId", tvID.getText().toString());
+                            pindah.putExtra("xNama", tvNama.getText().toString());
+                            pindah.putExtra("xAsal", tvAsal.getText().toString());
+                            pindah.putExtra("xDeskripsiSingkat", tvDeskripsiSingkat.getText().toString());
+                            ctx.startActivity(pindah);
                         }
                     });
                     pesan.show();

@@ -28,6 +28,15 @@
         android:layout_marginBottom="12dp"
         android:text="Makanan"/>
 
+        <TextView
+            android:id="@+id/tv_asal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/white"
+            android:text="Asal"/>
+
 
         <TextView
             android:id="@+id/tv_deskripsi_singkat"
